@@ -1,0 +1,231 @@
+body{   
+ font-style: italic;
+ display: flex;
+ flex-direction: column;
+ min-height:100v;
+}
+/* Styling for Welcome Message */
+.welcome-message {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 1px;
+  }
+  
+.container{
+   flex:1;
+}
+
+.navbar{
+    height:5rem;
+    background-color:white;
+}
+.logo{
+    color: red;
+    font-size:2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+footer {
+    margin-bottom: 0px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* card */
+.card{
+    border:none  !important;
+    margin-bottom:2rem;
+}
+.card-img-top{
+    border-radius:2rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding:0 !important;
+}
+.card-text{
+    font-weight:400;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* card over lay */
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color:white;
+}
+/* new listing */
+body{   
+ font-style: italic;
+ display: flex;
+ flex-direction: column;
+ min-height:100v;
+}
+.container{
+   flex:1;
+}
+
+.navbar{
+    height:5rem;
+    background-color:white;
+}
+.logo{
+    color: red;
+    font-size:2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+footer {
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* card */
+.card{
+    border:none  !important;
+    margin-bottom:2rem;
+}
+.card-img-top{
+    border-radius:2rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding:0 !important;
+}
+.card-text{
+    font-weight:400;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* card over lay */
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color:white;
+}
+ /* new listing */
+ .add-btn{
+    background-color: rgb(89, 204, 89) !important;
+     border: none !important;
+ }
+ 
+ /* edit btn */
+ .btn-edit{
+    background-color: red !important;
+    border:none !important;
+ }
+ 
+/* CSS for buttons below the card */
+ 
+.btns {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.btns .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Edit Button Styling */
+.btns .btn-dark:first-child {
+    background-color: #007bff; /* Blue for Edit */
+    color: #fff;
+    border: none;
+}
+
+.btns .btn-dark:first-child:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Delete Button Styling */
+.btns .btn-dark:last-child {
+    background-color: #dc3545; /* Red for Delete */
+    color: #fff;
+    border: none;
+}
+
+.btns .btn-dark:last-child:hover {
+    background-color: #a71d2a; /* Darker red on hover */
+}
+
+/* Accessibility Focus States */
+.btns .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
