@@ -73,7 +73,7 @@ app.delete("/listing/:id",async(req,res)=>{
 
 
 //server
-app.listen(8080,()=>{
+app.listen(8000,()=>{
     console.log("server running on port 8080");
 
 })

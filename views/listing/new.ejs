@@ -7,10 +7,16 @@
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required/>
+        <div class="valid-feedback">
+         Title looks good
+        </div>
       </div>
       <div class="mb-3">
         <label for="description" class="form-label">Discription</label>
         <textarea name="listing[description]" class="form-control" required></textarea>
+        <div class="invalid-feedback">
+          Write a short Description
+        </div>
       </div>
        
       <div class="mb-3">
@@ -22,10 +28,16 @@
         <div class="mb-3 col-md-4">
           <label for="price" class="form-label">Price</label>
           <input name="listing[price]" placeholder= "2000" type="number" class="form-control" required/>
+          <div class="invalid-feedback">
+            price should be valid
+          </div>
         </div>
         <div class="mb-3 col-md-8">
           <label for="country" class="form-label">Country</label>
           <input name="listing[country]" placeholder="India" type="text"class="form-control" required/>
+          <div class="invalid-feedback">
+            write valid country name
+          </div>
         </div>
       </div>
        <div class="mb-3">
@@ -35,6 +47,9 @@
         placeholder="Patna,jaipur etc"
         type="text"class="form-control" required
        />
+       <div class="invalid-feedback">
+        write valid location
+      </div>
        </div>
       <button class="btn btn-dark add-btn mt-3 mb-3">Add</button>
       
