@@ -1,9 +1,22 @@
-body{   
- font-style: italic;
- display: flex;
- flex-direction: column;
- min-height:100v;
-}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    margin: 0;  
+  }
+  .container {
+    flex: 1;  
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
 /* Styling for Welcome Message */
 .welcome-message {
     font-family: 'Verdana', sans-serif;
@@ -14,9 +27,7 @@ body{
     letter-spacing: 1px;
   }
   
-.container{
-   flex:1;
-}
+ 
 
 .navbar{
     height:5rem;
@@ -29,13 +40,7 @@ body{
 .nav-link{
     color: #222222 !important;
 }
-footer {
-    margin-bottom: 0px;
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
+ 
 
 .footer-content {
     max-width: 1200px;

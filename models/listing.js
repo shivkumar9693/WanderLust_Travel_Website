@@ -11,7 +11,7 @@ const listingSchema = new Schema({
     },
     image: {
         type: String,
-        set: (v) => v === "" ? "https://unsplash.com/photos/a-building-with-many-windows-by-water-Af8rY90C3e8" : v,
+        set: (v) => v === "" ? "https://th.bing.com/th/id/OIP.Bf6N5Uj6Yonzi7tqh_SkygHaEK?rs=1&pid=ImgDetMain" : v,
     },
     price: {
         type: Number,
