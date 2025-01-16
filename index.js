@@ -29,6 +29,16 @@ async function main() {
 app.get("/",(req,res)=>{
     res.send("root");
 })
+//validate listing for joi error
+const validateListing=(req,res,next)=>{
+    let {error} = ListingSchema.validate(req.body);
+    if (error) {
+        let errMsg=error.details.map((el)=>el.message).join(",");
+        throw new ExpressError(404, errMsg);
+    }else{
+        next();
+    }
+}
 //index route
 app.get("/listing",wrapAsync(async(req,res)=>{
    let allListing= await Listing.find({});
@@ -46,13 +56,7 @@ app.get("/listing/:id",wrapAsync(async(req,res)=>{
 
 }))
 //create route
-app.post("/listing", wrapAsync(async (req, res, next) => {
-    let result = ListingSchema.validate(req.body);
-    console.log(result.error);
-    if (result.error) {
-     
-        throw new ExpressError(404, result.error);
-    }
+app.post("/listing",validateListing, wrapAsync(async (req, res, next) => {
     const newListing = new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listing");
@@ -66,7 +70,7 @@ app.get("/listing/:id/edit",wrapAsync(async(req,res)=>{
     res.render("listing/edit.ejs",{listing});
 }))
 //put route
-app.put("/listing/:id",wrapAsync(async(req,res)=>{
+app.put("/listing/:id",validateListing,wrapAsync(async(req,res)=>{
     let{id}=req.params;
     await Listing.findByIdAndUpdate(id,{...req.body.listing});
      res.redirect(`/listing/${id}`);
