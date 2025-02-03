@@ -8,6 +8,7 @@ engine = require('ejs-mate');
 const wrapAsync=require("./util/wrapAsync.js");
 const ExpressError=require("./util/ExpressError.js");
 const {ListingSchema}=require("./ErrorSchema.js");
+const Reviews = require("./models/reviews.js");
 
 //middleware
 app.set("view engine","ejs");
@@ -83,6 +84,19 @@ app.delete("/listing/:id",wrapAsync(async(req,res)=>{
     res.redirect("/listing");
 
 }))
+//Reviews
+//post
+app.post("/listing/:id/review",async(req,res)=>{
+    let listing= await Listing.findById(req.params.id);
+    let userreview=new Reviews(req.body.review);
+
+     listing.reviews.push(userreview);
+
+    await userreview.save();
+    await listing.save();
+    res.redirect(`/listing/${listing._id}`);
+
+})
 //for all route if not matched
 app.use("*",(req,res,next)=>{
     next(new ExpressError(404,"page not found"));
