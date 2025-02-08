@@ -3,7 +3,7 @@
         <div class="col-8 offset-2">
             <h3><%= listing.title %></h3>
          </div>
-        <div class="card col-6 offset-2">
+        <div class="card col-6 offset-2 show-card listing-card">
              <img src="<%= listing.image %>" class="card-img-top show-img" alt="image"style="height:21rem;>
              <div class="card-body">
                  <p class="card-text">
@@ -26,17 +26,37 @@
      <hr>
      <div class="col-8 offset-2 mb-3">
       <h4>Leave Review</h4>
-      <form action="/listing/<%= listing.id %>/review" method="post">
+      <form action="/listing/<%= listing.id %>/review" method="post" class="needs-validation">
         <div class="mb-3 mt-3"> 
         <label for="rating" class="form-label">Rating</label>
         <input type="range" min="1" max="5" id="review" name="review[rating]" class="form-range">
          </div>
          <div class="mb-3 mt-3"> 
-        <label for="comment" class="form-label" >Comments</label>
-        <textarea name="review[comment]" id="comment" rows="5" cols="20" class="form-control"></textarea>
+        <label for="comment" class="form-label"  >Comments</label>
+        <textarea name="review[Comment]" id="comment" rows="5" cols="20" class="form-control" required></textarea>
+       
+      <div class="invalid-feedback">
+        please add some comment for review
+      </div>
       </div>
         <button class="btn btn-outline-dark ">Submit</button>
       </form>
+      <hr>
+      <h4 class="mt-4">All Reviews</h4>
+<div class="review-container">
+    <% for(let review of listing.reviews) { %>
+        <div class="review-card">
+            <div class="review-header">
+                <h5 class="card-title">Name</h5> <!-- Replace with actual username later -->
+                <p class="review-rating">⭐ <%= review.rating %>/5</p>
+            </div>
+            <p class="review-comment"><%= review.Comment %></p>
+        </div>
+        <form method="post" action="/listing/<%= listing._id %>/review/<%= review._id %>?_method=DELETE" class="review-form">
+            <button>Delete</button>
+        </form>
+    <% } %>
+</div> 
      </div>
    </div>
  

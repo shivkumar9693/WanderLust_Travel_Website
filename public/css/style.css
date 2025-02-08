@@ -68,7 +68,7 @@ body {
     font-size: 14px;
 }
 /* card */
-.card{
+.listing-card{
     border:none  !important;
     margin-bottom:2rem;
 }
@@ -234,3 +234,62 @@ footer {
 }
 
 
+.review-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.review-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.02);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-rating {
+    font-size: 18px;
+    color: #f39c12; /* Golden Star Color */
+}
+
+.review-comment {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Delete Button Styling */
+.review-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.review-form button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.review-form button:hover {
+    background-color: #c82333;
+}
